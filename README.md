@@ -3,6 +3,9 @@
 This project is a custom-built Unix shell implemented in C, developed as part of an academic assignment focused on understanding core concepts of operating systems and Unix internals. The goal was to simulate a Bash-like experience with support for process control, I/O redirection, piping, and environment management using system calls.
 
 ---
+Authors
+•	Kyle Moore
+•	Max Djafarov
 
 ## Features Implemented
 
@@ -118,21 +121,6 @@ quash/
 - No use of `system()` function
 - Parsing code left unmodified (except `destroy_parser()`)
 - Matches output format strictly per specification
-
----
-
-##  Submission Format
-- Uses `make submit` to package code with `.txt` extensions for submission
-- Validated using `make unsubmit` to ensure no build errors
-
----
-
-##  Collaboration
-Project completed in a team of 2, collaborating on:
-- I/O redirection and pipes logic
-- Background job manager
-- Command execution loop
-- Test case debugging and memory cleanup
 
 ---
 
