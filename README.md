@@ -4,9 +4,9 @@ This project is a custom-built Unix shell implemented in C, developed as part of
 
 ---
 
-## 🚀 Features Implemented
+## Features Implemented
 
-### ✅ Core Shell Execution
+###  Core Shell Execution
 - Executables run via absolute/relative path or via `$PATH`
 - Foreground and background job execution (`&` support)
 - Clear job start and completion messages
@@ -18,7 +18,7 @@ Background job started: [1] 2342 ./long_task &
 Completed: [1] 2342 ./long_task &
 ```
 
-### ✅ Built-in Commands
+###  Built-in Commands
 - `echo` - Prints arguments and supports environment variable substitution.
 - `export` - Sets environment variables.
 - `cd` - Changes current working directory and updates `PWD`.
@@ -26,18 +26,18 @@ Completed: [1] 2342 ./long_task &
 - `jobs` - Lists background jobs with their IDs, PIDs, and commands.
 - `quit` and `exit` - Properly exit the shell.
 
-### ✅ Process Management
+###  Process Management
 - Robust job tracking with unique job IDs
 - Maintains job lists using a deque data structure (from `src/deque.h`)
 - Background job completion detection and output
 
-### ✅ I/O Redirection
+###  I/O Redirection
 - `>` - Truncates and writes to file
 - `>>` - Appends to file
 - `<` - Redirects input from file
 - Handles multiple redirection operations per command
 
-### ✅ Piping
+###  Piping
 - Pipe (`|`) support between multiple commands
 - Mixed piping and redirection
 - Example:
@@ -48,7 +48,7 @@ cat file.txt | grep Hello | tee output.txt
 
 ---
 
-## 🧠 Learning Objectives
+##  Learning Objectives
 - Understand and implement process control using `fork()`, `execvp()`, and `waitpid()`
 - Manipulate file descriptors using `dup2()` for redirection and piping
 - Use `chdir()`, `setenv()`, and `getenv()` to manage the working directory and environment variables
@@ -56,7 +56,7 @@ cat file.txt | grep Hello | tee output.txt
 
 ---
 
-## 🛠️ Technical Highlights
+##  Technical Highlights
 
 - Modularized design in `src/execute.c` for command execution logic
 - Parsing handled separately in `src/parsing/`
@@ -68,14 +68,14 @@ cat file.txt | grep Hello | tee output.txt
 
 ---
 
-## 🧪 Testing
+## Testing
 - Comprehensive test suite with `run_tests.bash`
 - Supports output diff checks and memory error validation
 - Run via `make test` or manually with flags (e.g., `-v` for verbose)
 
 ---
 
-## 📦 Build & Run
+## Build & Run
 ```bash
 # Build the shell
 make
@@ -92,7 +92,7 @@ make doc
 
 ---
 
-## 💡 Project Structure
+##  Project Structure
 ```
 quash/
 ├── src/
@@ -107,27 +107,27 @@ quash/
 
 ---
 
-## 🧼 Memory Safety
+##  Memory Safety
 - Zero valgrind errors
 - All dynamically allocated memory is freed properly
 - No use-after-free, invalid reads/writes, or uninitialized access
 
 ---
 
-## 🔐 Constraints Followed
+## Constraints Followed
 - No use of `system()` function
 - Parsing code left unmodified (except `destroy_parser()`)
 - Matches output format strictly per specification
 
 ---
 
-## 📁 Submission Format
+##  Submission Format
 - Uses `make submit` to package code with `.txt` extensions for submission
 - Validated using `make unsubmit` to ensure no build errors
 
 ---
 
-## 🤝 Collaboration
+##  Collaboration
 Project completed in a team of 2, collaborating on:
 - I/O redirection and pipes logic
 - Background job manager
@@ -136,7 +136,7 @@ Project completed in a team of 2, collaborating on:
 
 ---
 
-## 📌 Summary
+##  Summary
 This project simulates a functional Unix shell with realistic command execution behavior. It allowed me to dive deep into system-level programming, learning how shells work under the hood, and how to build robust and extensible software using low-level tools. Perfect for developers interested in OS, systems programming, and process control.
 
 ---
